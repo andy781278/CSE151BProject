@@ -1,0 +1,52 @@
+{
+  "args": {
+    "dataset": "allenai/ai2_arc",
+    "config": "ARC-Challenge",
+    "max_len": 512,
+    "model_name": "microsoft/deberta-v3-large",
+    "batch_size": 2,
+    "accum_steps": 1,
+    "lr": 8e-06,
+    "epochs": 3,
+    "seeds": [
+      7
+    ],
+    "train_on": "both",
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.1,
+    "out_dir": "runs",
+    "top_k": 0,
+    "retrieved_dir": "retrieved",
+    "grad_ckpt": true
+  },
+  "per_seed": [
+    {
+      "seed": 7,
+      "best_val_acc": 0.7190635451505016,
+      "test_acc": 0.7150170648464164,
+      "train_losses": [
+        0.9133377457231018,
+        0.2922821117084175,
+        0.08765731027642767
+      ],
+      "val_losses": [
+        0.7965943135545406,
+        0.9006347632328403,
+        1.0056279518931206
+      ],
+      "train_accs": [
+        0.6169139465875371,
+        0.8940652818991098,
+        0.9724035608308605
+      ],
+      "val_accs": [
+        0.7023411371237458,
+        0.6822742474916388,
+        0.7190635451505016
+      ]
+    }
+  ],
+  "mean_test_acc": 0.7150170648464164,
+  "std_test_acc": 0.0,
+  "ensemble_test_acc": 0.7150170648464164
+}
